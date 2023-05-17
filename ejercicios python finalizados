@@ -1,0 +1,159 @@
+
+#ejercicio 1
+num1 = int(input("ingrese el primer valor: "))
+num2 = int(input("ingrese el segundo valor: "))
+num3 = int(input("ingrese el tercer valor: "))
+
+if num1>num2 and num1>num3 and num2>num3:
+    print(f"{num3} es el menor, {num1} es el mayor")  
+elif num2>num1 and num2>num3 and num1>num3:
+    print(f"{num3} es el menor, {num2} es el mayor")
+elif num3>num1 and num3>num2 and num2>num1:
+    print(f"{num1} es el menor, {num3} es el mayor")
+else:
+    num2<num1 and num2<num3 and num3>num1
+    print(f"{num2} es el menor, {num3} es el mayor")
+print("")
+
+#ejercicio 2
+palabra1 = input("ingrese una palabra: ")
+palabra2 = input("ingrese otra palabra: ")
+print("")
+print("la primera palabra tiene",len(palabra1),"letras")
+print("la segunda palabra tiene",len(palabra2),"letras")
+if len(palabra1)>len(palabra2):
+     print(palabra1,", tiene mas caracteres")
+else:
+     len(palabra1)<len(palabra2)
+     print(palabra2,", tiene mas caracteres")
+print("")
+
+#ejercicio 3
+lado1 = float(input("ingrse el primer lado: "))
+lado2 = float(input("ingrse el segundo lado: "))
+lado3 = float(input("ingrese el tercer lado: "))
+p=(lado1+lado2+lado3)/2 
+A=(p*(p-lado1)*(p-lado2)*(p-lado3))**(1/2)
+if lado1==lado2 and lado1==lado3 and lado2==lado3:
+     print("el tiangulo es equilatero")
+     print(f"y su area es de {A:.2f}")
+elif lado1==lado2 and lado1!=lado3 or lado2==lado1 and lado2!=lado3 or lado3==lado1 and lado3!=lado2 or lado3==lado2 and lado3!=lado1:
+     print("el triangulo es isosceles")
+     print(f"y su area es de {A:.2f}")
+else:
+     lado1!=lado2 and lado2!=lado3 and lado3!=lado1
+     print("el triangulo es escaleno")
+     print(f"y su area es de {A:.2f}")
+print("")
+
+#ejercicio 4
+nombre1 = input("ingrese el nombre de la primera persona: ")
+nombre2 = input("ingrese el nombre de la segunda persona: ")
+print("")
+if nombre1[0] == nombre2[0]:
+    print("ambos nombres empiezan con la misma letra")
+    if nombre1[-1] == nombre2[-1]:print("ambos nombres terminan con la misma letra")
+else:
+    nombre1[0] != nombre2[0] and nombre1[-1] != nombre2[-1]
+    print("no hay coincidencias")
+print("")
+
+#ejercicio 5 
+lab1 = float(input("ingrese primera nota: "))
+lab2 = float(input("ingrese segunda nota: "))
+lab3 = float(input("ingrese tercera nota: "))
+promedio = lab1*0.3+lab2*0.4+lab3*0.3
+print(f"promedio ponderado: {promedio:.1f}")
+print("")
+if promedio>=1.0 and promedio<=3.9:
+    print("el alumno reprobo")
+elif promedio<=5.9 and promedio>=3.9:
+    print("el alumno aprobo")
+else:
+    promedio>=5.9 and promedio==7.0
+    print("el alumno aprobo con distincion")
+print("")
+
+#ejercicio 6
+print("Grupos y Nombres de los Estudiantes")
+print("")
+print("Grupo1:","Marcos","Gabriela","Benjamin","Matias")
+print("Grupo2:","Marcos","Nicolas","Diego","Matias")
+grupo1 = {"Marcos","Gabriela","Benjamin","Matias"}
+grupo2 = {"Marcos","Nicolas","Diego","Matias"}
+union = grupo1 & grupo2
+print("")
+print(f"Los estudiantes en comun son:,{union}")
+print("")
+
+#ejercicio 7
+nombres = ["pedro","juan","diego","matias","alvaro"]
+edades = [23,34,54,32,21,43]
+res = list(zip(nombres,edades))
+print(res)
+print("")
+
+#ejercicio 8
+print("Ingrese un mes para saber la estacion")
+estacion = input("Mes: ")
+verano = ("diciembre","enero","febrero")
+otoño = ("marzo","abril","mayo","junio")
+invierno= ("julio","agosto","septiembre")
+primavera=("octubre","noviembre")
+print("")
+print("")
+if estacion in ("diciembre","enero","febrero"):
+    print("este mes se encuentra en verano")
+elif estacion in ("marzo","abril","mayo","junio"):
+    print("este mes se encuentra en otoño")
+elif estacion in ("julio","agosto","septiembre"):
+    print("este mes se encuentra en invierno")
+else:
+    estacion in ("octubre","noviembre")
+    print("este mes se encuentra en primavera")
+print("")
+
+#ejercicio 9
+numeros = [4, 3, 8, 12, 6, 10, 14, 3, 6]
+print("numeros de la lista:")
+print(numeros)
+print("")
+numeros.pop(8)
+print("se elimina el ultimo elemento")
+print(numeros) 
+print("")
+numeros.insert(0, 2)
+print("se agrega el 2 en la posicion del indice 0")
+print(numeros)
+print("")
+numeros1 = set(numeros)
+print("se elimina el elemento repetido (3)")
+print(numeros1)
+print("")
+numeros2 = sum(numeros1)/len(numeros1)
+print("se saca la media de la lista")
+print(f"media de la lista: {numeros2:.1f}")
+print("")
+mediana = (6+8)/2
+print("se saca la mediana de la lista")
+print(f"mediana de la lista: {mediana:.1f}")
+print("")
+print()
+
+#ejercicio 10
+print("Agenda telefonica de juan carlos")
+print()
+agenda_telefonica = {
+"nombre": "Juan Carlos Bodoque",
+"direccion": "los laureles #2123",
+"ciudad": "Osorno", 
+"telefono": 81562320
+}
+print()
+print("agenda telefonica", agenda_telefonica)
+agenda_telefonica["redes sociales"]= ["facebook: Juan Carlos", "instagram: Juan_Carlos", "twitter: Juan33C"]
+print()
+print("El usario de facebook es:",agenda_telefonica["redes sociales"][0])
+print()
+print("Agenda telefonica:",agenda_telefonica)
+print()
